@@ -25,7 +25,15 @@ class Student
 
   def self.drop_table
     sql =  <<-SQL
-    CREATE TALBE IF NOT EXISTS
+    DROP TABLE students
+    SQL
     end
+
+    def save
+      sql =  <<-SQL
+      INSERT INTO students (name, grade)
+      VALUES (?, ?)
+
+
 
 end
